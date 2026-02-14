@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <%- include('navbar.ejs') %>
+
+        <div class="container mt-5 text-center">
+            <div class="card shadow p-4">
+                <h1>Course Portal</h1>
+                <p class="mt-3">Total Courses Available:</p>
+                <h3 class="text-primary">
+                    <%= total %>
+                </h3>
+            </div>
+        </div>
+
+        <%- include('footer.ejs') %>
+
+</body>
+
+</html>

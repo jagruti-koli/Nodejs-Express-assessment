@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Courses</title>
+</head>
+
+<body>
+
+    <%- include('navbar.ejs') %>
+
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Available Courses</h2>
+
+            <div class="row">
+                <% courses.forEach(course=> { %>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow p-3">
+                            <h5>
+                                <%= course.name %>
+                            </h5>
+                            <p>Duration: <%= course.duration %>
+                            </p>
+                            <p>Fees: ₹<%= course.fees %>
+                            </p>
+
+                            <a href="/course-details?id=<%= course.id %>">
+                                View Details
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+
+        <%- include('footer.ejs') %>
+
+</body>
+
+</html>
